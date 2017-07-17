@@ -1,0 +1,25 @@
+inherit kf5
+
+NAME="kf5-kcalutils"
+VERSION=17.04.3
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE calendar utility library"
+DESCRIPTION="This library provides a set of utility functions that help
+applications access and use calendar data via the KCalCore library."
+
+PKG_NAMES="libKF5CalendarUtils5 libKF5CalendarUtils-devel"
+libKF5CalendarUtils5_CONTENTS="
+	usr/bin/cygKF5CalendarUtils-5.dll
+	usr/lib/grantlee/5.1/kcalendar_grantlee_plugin.dll
+	usr/share/doc/${NAME}
+	usr/share/locale/*/LC_MESSAGES/libkcalutils5.mo
+"
+libKF5CalendarUtils_devel_REQUIRES="libKF5CalendarCore-devel libKF5Config-devel libQt5Core-devel"
+libKF5CalendarUtils_devel_CONTENTS="
+	usr/include/KF5/KCalUtils/
+	usr/include/KF5/kcalutils_version.h
+	usr/lib/cmake/KF5CalendarUtils/
+	usr/lib/libKF5CalendarUtils.dll.a
+	usr/lib/qt5/mkspecs/modules/qt_KCalUtils.pri
+"
